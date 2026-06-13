@@ -63,8 +63,9 @@ Examples:
 •	If a web server service stops, websites hosted on that server become inaccessible.
 
 # PART E 
-script file 
 ![image](Screenshorts/3_7.png)
+
+
 #!/bin/bash
 echo "================================="
 
@@ -107,6 +108,7 @@ echo "================================="
 Purpose:
 netstat (Network Statistics) is used to display network connections, routing tables, interface statistics, and listening ports on a system.
 
+![i](Screenshorts/3_8.png)
 
 Example Output
 $ netstat -tuln
@@ -126,6 +128,7 @@ Purpose
 ss (Socket Statistics) is a modern replacement for netstat. It displays network sockets and active connections more efficiently.
 Example Output
 $ ss -tuln
+![i](Screenshorts/3_9.png)
 
 Netid State  Local Address:Port
 tcp   LISTEN 0.0.0.0:22
@@ -141,6 +144,8 @@ Example: Security administrators use ss to identify unknown applications communi
 Purpose
 The who command displays information about users currently logged into the system.
 Example Output
+
+![i](Screenshorts/3_10.png)
 $ who
 
 student  pts/0  2025-06-13 09:15
@@ -156,6 +161,8 @@ Example: If an unknown user account appears, it may indicate unauthorized access
 Purpose
 The w command shows who is logged in and what they are currently doing.
 Example Output
+
+![i](Screenshorts/3_10.png)
 $ w
 
 USER     TTY   FROM        LOGIN@   IDLE
@@ -171,6 +178,8 @@ Purpose
 The last command displays the login history of users on the system.
 Example Output
 $ last
+
+![i](Screenshorts/3_10.png)
 
 student pts/0 192.168.1.5 Fri Jun 13 09:15
 admin   pts/1 192.168.1.8 Thu Jun 12 14:20
