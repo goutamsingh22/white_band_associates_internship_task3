@@ -194,113 +194,23 @@ Example: If someone accessed the system at an unusual time, last can help identi
 Netstat 
 Purpose: Shows network connections and ports 
 
-Example output: 
 Active Internet connections (w/o servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State      
-udp        0      0 10.0.2.15:bootpc        10.0.2.2:bootps         ESTABLISHED
-Active UNIX domain sockets (w/o servers)
-Proto RefCnt Flags       Type       State         I-Node   Path
-unix  3      [ ]         STREAM     CONNECTED     13990    
-unix  3      [ ]         STREAM     CONNECTED     14616    
-unix  3      [ ]         STREAM     CONNECTED     12410    /run/user/1000/at-spi/bus_0
-unix  3      [ ]         STREAM     CONNECTED     10229    
-unix  3      [ ]         STREAM     CONNECTED     10832    
-unix  3      [ ]         STREAM     CONNECTED     10674    /run/dbus/system_bus_socket
-unix  3      [ ]         STREAM     CONNECTED     20291    /run/user/1000/gvfsd/socket-r6sfVsPh
-unix  3      [ ]         STREAM     CONNECTED     13607    
-unix  3      [ ]         STREAM     CONNECTED     14350    
-unix  3      [ ]         STREAM     CONNECTED     8509     
-unix  3      [ ]         STREAM     CONNECTED     14972    /run/user/1000/bus
-unix  3      [ ]         STREAM     CONNECTED     11237    @/tmp/.X11-unix/X0
-unix  3      [ ]         STREAM     CONNECTED     14431    /run/user/1000/bus
-unix  3      [ ]         STREAM     CONNECTED     11513    /run/systemd/journal/stdout
-unix  3      [ ]         STREAM     CONNECTED     15288    /run/user/1000/bus
-unix  3      [ ]         STREAM     CONNECTED     12006    /run/user/1000/bus
-unix  3      [ ]         STREAM     CONNECTED     11962    
-unix  3      [ ]         STREAM     CONNECTED     14976    /run/user/1000/bus
-unix  3      [ ]         STREAM     CONNECTED     10800    
-unix  3      [ ]         STREAM     CONNECTED     14238    /run/user/1000/bus
-unix  3      [ ]         STREAM     CONNECTED     12024    
-unix  3      [ ]         STREAM     CONNECTED     10896    /run/dbus/system_bus_socket
-unix  3      [ ]         STREAM     CONNECTED     10828    
-unix  3      [ ]         STREAM     CONNECTED     14241    @/tmp/.ICE-unix/970
-unix  3      [ ]         STREAM     CONNECTED     13985    /run/dbus/system_bus_socket
 
 Security use case: Detect Open port and suspicious connections 
 
 Ss
 Displays socket and network information
-Example output: 
-RTNETLINK answers: Invalid argument
-Netid  State    Recv-Q   Send-Q                                    Local Address:Port          Peer Address:Port    
-u_str  ESTAB    0        0                                                     * 13990                    * 13991   
-u_str  ESTAB    0        0                                                     * 14616                    * 13561   
-u_str  ESTAB    0        0                           /run/user/1000/at-spi/bus_0 12410                    * 11970   
-u_str  ESTAB    0        0                                                     * 10229                    * 10902   
-u_str  ESTAB    0        0                                                     * 10832                    * 10833   
-u_str  ESTAB    0        0                           /run/dbus/system_bus_socket 10674                    * 10015   
-u_str  ESTAB    0        0                  /run/user/1000/gvfsd/socket-r6sfVsPh 20291                    * 20290   
-u_str  ESTAB    0        0                                                     * 13607                    * 13608   
-u_str  ESTAB    0        0                                                     * 14350                    * 14351   
-u_str  ESTAB    0        0                                                     * 8509                     * 8043    
-u_str  ESTAB    0        0                                    /run/user/1000/bus 14972                    * 14971   
-u_str  ESTAB    0        0                                    @/tmp/.X11-unix/X0 11237                    * 11236   
-u_str  ESTAB    0        0                                    /run/user/1000/bus 14431                    * 14430   
-u_str  ESTAB    0        0                           /run/systemd/journal/stdout 11513                    * 11133   
-u_str  ESTAB    0        0                                    /run/user/1000/bus 15288                    * 15287   
-u_str  ESTAB    0        0                                    /run/user/1000/bus 12006                    * 12446   
-u_str  ESTAB    0        0                                                     * 11962                    * 12408
 Monitor active network communications
 
 Who
 Shows current logged-in users 
-Example output: 
-kali     seat0        2026-06-13 05:47 (:0)
 Detect unauthorized users
 
 W
 Shows logged-in users and activities 
-Example output : 
-06:03:38 up 16 min,  1 user,  load average: 0.10, 0.07, 0.09
-USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
-kali              -                05:47           0.00s  0.01s lightdm --session-child 13 24
-Monitor user actions 
 
 Last 
 Displays login history 
-Example output : 
-kali     tty7         :0               Sat Jun 13 05:47 - still logged in
-lightdm  tty7         :0               Sat Jun 13 05:46 - 05:47  (00:00)
-kali     tty7         :0               Sat Jun 13 05:31 - still logged in
-lightdm  tty7         :0               Sat Jun 13 05:31 - 05:31  (00:00)
-kali     tty7         :0               Sat Jun 13 01:35 - 02:52  (01:16)
-lightdm  tty7         :0               Sat Jun 13 01:34 - 01:35  (00:01)
-kali     tty7         :0               Sat Jun  6 13:50 - 14:18  (00:28)
-lightdm  tty7         :0               Sat Jun  6 13:50 - 13:50  (00:00)
-kali     tty7         :0               Sat Jun  6 08:08 - 08:53  (00:44)
-lightdm  tty7         :0               Sat Jun  6 08:08 - 08:08  (00:00)
-kali     tty7         :0               Tue Jun  2 06:05 - still logged in
-lightdm  tty7         :0               Tue Jun  2 06:05 - 06:05  (00:00)
-root     pts/2                         Sat May 23 04:12 - 04:33  (00:21)
-kali     tty7         :0               Sat May 23 04:06 - 04:36  (00:29)
-lightdm  tty7         :0               Sat May 23 04:06 - 04:06  (00:00)
-root     pts/1                         Sat May 23 03:27 - 03:28  (00:01)
-kali     tty7         :0               Sat May 23 03:26 - 03:28  (00:02)
-lightdm  tty7         :0               Sat May 23 03:26 - 03:26  (00:00)
-root     pts/1                         Mon Apr 20 09:50 - 09:52  (00:02)
-kali     tty7         :0               Mon Apr 20 09:50 - 10:21  (00:31)
-lightdm  tty7         :0               Mon Apr 20 09:50 - 09:50  (00:00)
-root     pts/1                         Sun Apr 19 22:13 - 22:13  (00:00)
-root     pts/1                         Sun Apr 19 22:12 - 22:13  (00:01)
-kali     pts/0                         Sun Apr 19 22:02 - 22:08  (00:05)
-kali     tty7         :0               Sun Apr 19 22:01 - 22:14  (00:12)
-lightdm  tty7         :0               Sun Apr 19 22:01 - 22:01  (00:00)
-kali     pts/0                         Tue Feb  3 12:26 - 12:27  (00:00)
-kali     tty7         :0               Tue Feb  3 12:23 - still logged in
-lightdm  tty7         :0               Tue Feb  3 12:21 - 12:23  (00:01)
-postgres                               Tue Dec  2 21:35 - 21:35  (00:00)
-
-wtmpdb begins Tue Dec  2 21:35:30 2025
 Investigate previous logins and security events 
 
 # Part G: Mini SOC activity
