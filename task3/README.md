@@ -63,8 +63,8 @@ Examples:
 •	If a web server service stops, websites hosted on that server become inaccessible.
 
 # PART E 
-
-#!/bin/bash
+script file 
+# !/bin/bash
 echo "================================="
 echo " System Information Report"
 echo "================================="
