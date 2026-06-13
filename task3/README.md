@@ -104,8 +104,10 @@ echo "================================="
 
 # TASK E 
 1. netstat
-Purpose
+Purpose:
 netstat (Network Statistics) is used to display network connections, routing tables, interface statistics, and listening ports on a system.
+
+
 Example Output
 $ netstat -tuln
 
@@ -117,6 +119,8 @@ Security Use Case
 •	Identify suspicious network connections. 
 •	Verify which services are listening on the system. 
 Example: An attacker may open a hidden service on port 4444. netstat can help identify it.
+
+
 2. ss
 Purpose
 ss (Socket Statistics) is a modern replacement for netstat. It displays network sockets and active connections more efficiently.
@@ -131,6 +135,8 @@ Security Use Case
 •	Detect unexpected listening services. 
 •	Troubleshoot suspicious traffic. 
 Example: Security administrators use ss to identify unknown applications communicating over the network.
+
+
 3. who
 Purpose
 The who command displays information about users currently logged into the system.
@@ -144,6 +150,8 @@ Security Use Case
 •	Detect unauthorized user access. 
 •	Monitor shared systems. 
 Example: If an unknown user account appears, it may indicate unauthorized access.
+
+
 4. w
 Purpose
 The w command shows who is logged in and what they are currently doing.
