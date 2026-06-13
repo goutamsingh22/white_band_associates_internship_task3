@@ -110,13 +110,8 @@ netstat (Network Statistics) is used to display network connections, routing tab
 
 ![i](Screenshorts/3_8.png)
 
-Example Output
-$ netstat -tuln
-
-Proto Local Address      State
-tcp   0.0.0.0:22         LISTEN
-tcp   0.0.0.0:80         LISTEN
 Security Use Case
+
 •	Detect unauthorized open ports. 
 •	Identify suspicious network connections. 
 •	Verify which services are listening on the system. 
@@ -126,14 +121,10 @@ Example: An attacker may open a hidden service on port 4444. netstat can help id
 2. ss
 Purpose
 ss (Socket Statistics) is a modern replacement for netstat. It displays network sockets and active connections more efficiently.
-Example Output
+
 $ ss -tuln
 ![i](Screenshorts/3_9.png)
 
-Netid State  Local Address:Port
-tcp   LISTEN 0.0.0.0:22
-tcp   LISTEN 0.0.0.0:80
-Security Use Case
 •	Monitor active network connections. 
 •	Detect unexpected listening services. 
 •	Troubleshoot suspicious traffic. 
@@ -148,9 +139,8 @@ Example Output
 ![i](Screenshorts/3_10.png)
 $ who
 
-student  pts/0  2025-06-13 09:15
-admin    pts/1  2025-06-13 10:00
 Security Use Case
+
 •	Identify currently logged-in users. 
 •	Detect unauthorized user access. 
 •	Monitor shared systems. 
@@ -165,62 +155,46 @@ Example Output
 ![i](Screenshorts/3_10.png)
 $ w
 
-USER     TTY   FROM        LOGIN@   IDLE
-student  pts/0 192.168.1.5 09:15    2:00
 Security Use Case
+
 •	Monitor user activity. 
 •	Identify suspicious sessions. 
 •	Detect unusual login behavior. 
+
 Example: An administrator can see if a user is running unexpected processes.
 
 5. last
+
 Purpose
+
 The last command displays the login history of users on the system.
-Example Output
+
 $ last
 
 ![i](Screenshorts/3_10.png)
 
-student pts/0 192.168.1.5 Fri Jun 13 09:15
-admin   pts/1 192.168.1.8 Thu Jun 12 14:20
 Security Use Case
+
 •	Audit login history. 
+
 •	Investigate security incidents. 
+
 •	Detect unauthorized login attempts. 
+
 Example: If someone accessed the system at an unusual time, last can help identify when and from where.
-
-
-
-Netstat 
-Purpose: Shows network connections and ports 
-
-Active Internet connections (w/o servers)
-
-Security use case: Detect Open port and suspicious connections 
-
-Ss
-Displays socket and network information
-Monitor active network communications
-
-Who
-Shows current logged-in users 
-Detect unauthorized users
-
-W
-Shows logged-in users and activities 
-
-Last 
-Displays login history 
-Investigate previous logins and security events 
+ 
 
 # Part G: Mini SOC activity
 1. How would you identify resource-heavy processes?
+   
 If a system is running slowly, I would first use commands such as top, htop, and ps aux to monitor running processes. These commands show CPU and memory usage in real time. I would look for processes consuming unusually high CPU or RAM, as they are often responsible for system performance issues.
 
 2. How would you determine whether a process is suspicious?
+
 I would check the process name, PID, owner, CPU usage, memory usage, and the location from which the process is running. I would also verify whether the process is a legitimate system service or an expected application. If the process has an unusual name, consumes excessive resources, starts automatically without reason, or maintains unexpected network connections, it may be suspicious and require further investigation.
 
 3. What information would you collect before terminating a process?
+
 Before terminating a process, I would collect important information such as:
 •	Process Name
 •	PID (Process ID)
