@@ -62,7 +62,8 @@ Examples:
 •	If NetworkManager stops, network connections may fail. 
 •	If a web server service stops, websites hosted on that server become inaccessible.
 
-PART E 
+# PART E 
+
 #!/bin/bash
 echo "================================="
 echo " System Information Report"
