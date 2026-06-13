@@ -1,3 +1,4 @@
+# Task A
 1. What is a Process?
 A process is a program that is currently running on a computer. Each process uses system resources such as CPU, memory, and storage to perform its tasks.
 Example: Web browsers, terminal applications, and text editors are all processes when they are running.
@@ -18,13 +19,13 @@ Look at the %CPU column.
 The process with the highest percentage is consuming the most CPU.
 Example Answer:
 The process consuming the most CPU was firefox with approximately 25% CPU usage.
-⚠️ Replace "firefox" and "25%" with the values from your system.
+Replace "firefox" and "25%" with the values from your system.
 
 4. Which process is consuming the most Memory?
 In top or htop, look at the %MEM column.
 The process with the highest percentage is consuming the most memory.
 
-Part c 
+# Part C
 System Summary Report
 System Information
 •	Operating System: Kali Linux
@@ -42,7 +43,7 @@ System Uptime
 Conclusion
 This report provides an overview of the system's hardware resources and operating system status. The system has sufficient available memory and disk space and is running normally.
 
-Task d ;
+# Task D
 1. What is a Service?
 A service is a program that runs in the background and performs specific tasks without direct user interaction. Services start automatically or manually and help the operating system function properly.
 Examples:
@@ -82,7 +83,7 @@ echo "================================="
 echo " End of Report"
 echo "================================="
 
-TASK E 
+# TASK E 
 1. netstat
 Purpose
 netstat (Network Statistics) is used to display network connections, routing tables, interface statistics, and listening ports on a system.
@@ -266,11 +267,13 @@ postgres                               Tue Dec  2 21:35 - 21:35  (00:00)
 wtmpdb begins Tue Dec  2 21:35:30 2025
 Investigate previous logins and security events 
 
-Part G: Mini SOC activity
+# Part G: Mini SOC activity
 1. How would you identify resource-heavy processes?
 If a system is running slowly, I would first use commands such as top, htop, and ps aux to monitor running processes. These commands show CPU and memory usage in real time. I would look for processes consuming unusually high CPU or RAM, as they are often responsible for system performance issues.
+
 2. How would you determine whether a process is suspicious?
 I would check the process name, PID, owner, CPU usage, memory usage, and the location from which the process is running. I would also verify whether the process is a legitimate system service or an expected application. If the process has an unusual name, consumes excessive resources, starts automatically without reason, or maintains unexpected network connections, it may be suspicious and require further investigation.
+
 3. What information would you collect before terminating a process?
 Before terminating a process, I would collect important information such as:
 •	Process Name
