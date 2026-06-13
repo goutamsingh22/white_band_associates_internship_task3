@@ -64,7 +64,7 @@ Examples:
 
 # PART E 
 script file 
-!(Screenshorts/3_7.png)
+![image](Screenshorts/3_7.png)
 #!/bin/bash
 echo "================================="
 
